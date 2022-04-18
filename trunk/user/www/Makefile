@@ -7,9 +7,9 @@ ROMFS_DIR = $(ROOTDIR)/romfs
 include $(ROOTDIR)/user/shared/boards.mk
 
 PROJECT_HOME_URL="https:\/\/bitbucket.org\/padavan\/rt-n56u\/"
-PROJECT_HOME_URL_MOD="https:\/\/github.com\/hanwckf\/rt-n56u\/"
+PROJECT_HOME_URL_MOD="https:\/\/github.com\/monw\/rt-n56u\/"
 
-LABEL_COPYRIGHT_TEXT='© 2011-2019 <a href="https:\/\/bitbucket.org\/padavan\/rt-n56u" target="blank">Padavan<\/a> \& N56U project community \& by <a href="https:\/\/github.com\/hanwckf\/rt-n56u" target="blank">hanwckf<\/a>'
+LABEL_COPYRIGHT_TEXT='© 2011-2022 <a href="https:\/\/bitbucket.org\/padavan\/rt-n56u" target="blank">Padavan<\/a> \& N56U project community \& by <a href="https:\/\/github.com\/hanwckf\/rt-n56u" target="blank">hanwckf<\/a>'
 
 BOARD_PATTERN=s/ZVMODELVZ/$(CONFIG_FIRMWARE_PRODUCT_ID)/g
 COPYR_PATTERN=s/ZVCOPYRVZ/$(LABEL_COPYRIGHT_TEXT)/g
@@ -200,7 +200,7 @@ ifneq ($(CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS),y)
 	rm -f $(INSTALLDIR)/www/Shadowsocks_log.asp
 endif
 
-ifeq ($(CONFIG_FIRMWARE_WEBUI_HIDE_VPN),y)
+ifeq ($(CONFIG_FIRMWARE_WEBUI_HIDE_VPN),n)
 	rm -f $(INSTALLDIR)/www/vpn_clients.asp
 	rm -f $(INSTALLDIR)/www/vpncli.asp
 	rm -f $(INSTALLDIR)/www/vpnsrv.asp
