@@ -108,7 +108,7 @@ dir_y							+= iptables
 dir_y							+= coremark
 ifneq ($(CONFIG_WITHOUT_KERNEL),y)
 dir_$(CONFIG_FIRMWARE_INCLUDE_IPSET)			+= ipset
-#dir_y							+= accel-pptpd
+dir_y							+= accel-pptpd
 endif
 dir_y							+= ebtables
 dir_y							+= iproute2
@@ -128,8 +128,8 @@ dir_y							+= infosvr
 #dir_y							+= inadyn
 #dir_y							+= miniupnpd
 dir_y							+= dnsmasq
-#dir_y							+= igmpproxy
-#dir_y							+= udpxy
+dir_y							+= igmpproxy
+dir_y							+= udpxy
 dir_y							+= utils
 dir_y							+= lanauth
 #dir_y							+= 802.1x
